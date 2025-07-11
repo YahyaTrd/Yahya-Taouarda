@@ -1,0 +1,386 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins";
+  scroll-behavior: smooth;
+}
+:root {
+  --bg-color: #080808;
+  --second-bg-color: #101010;
+  --main-color: rgb(65, 25, 244);
+  --text-color: white;
+}
+html {
+  font-size: 60%;
+  overflow-x: hidden;
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 3rem 7%;
+  left: 0;
+  background: #00000056;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+#menu-icon {
+  color: var(--main-color);
+  font-size: 3.5rem;
+  display: none;
+}
+.logo {
+  color: var(--text-color);
+  font-size: 3rem;
+  font-weight: 800;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s ease-in-out;
+}
+.logo:hover {
+  transform: scale(1.1);
+}
+span {
+  font-family: "Poppins", sans-serif;
+  color: rgb(65, 25, 244);
+}
+.navbar a {
+  color: var(--text-color);
+  font-size: 1.9rem;
+  margin-left: 4rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-bottom: 3px solid transparent;
+  transition: 0.4s ease-in-out;
+  font-weight: 600;
+  text-align: center;
+}
+.navbar a:hover {
+  color: var(--main-color);
+  border-bottom: 3px solid var(--main-color);
+}
+section {
+  min-height: 100vh;
+  padding: 10rem 15%;
+}
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15rem;
+}
+.home-content {
+  flex-direction: column;
+  align-items: flex-end;
+  display: flex;
+  text-align: right;
+}
+.home-content h1 {
+  font-weight: 700;
+  margin-top: 1.5rem;
+  font-size: 8rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  line-height: 1;
+}
+.home-content h3 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 1rem 0;
+  font-size: 4.3rem;
+}
+.home-content p {
+  font-weight: 400;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 2.5rem;
+  line-height: 1.8;
+}
+.home-img img {
+  width: 35vw;
+  height: 60rem;
+  box-shadow: 0 0 24px var(--text-color);
+  transition: 0.2s ease-in-out;
+  border-radius: 50%;
+}
+.home-img img:hover {
+  box-shadow: 0 0 24px var(--text-color), 0 0 40px var(--main-color);
+}
+.sociel-icon a {
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+  font-size: 3rem;
+  margin: 1rem;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  padding: 1rem;
+  border-radius: 40%;
+  background: transparent;
+  transition: 0.3s ease-in-out;
+}
+.sociel-icon a:hover {
+  color: var(--text-color);
+  background-color: var(--main-color);
+}
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--second-bg-color);
+  gap: 10rem;
+}
+.about-img img {
+  width: 32vw;
+  border: 50%;
+  transition: 0.4s ease-in-out;
+  box-shadow: 0 0 25px var(--main-color);
+}
+.about-img img:hover {
+  box-shadow: 0 0 25px var(--main-color) var(--text-color) var(--main-color);
+  background-color: var(--main-color);
+}
+.about-content h2 {
+  font-size: 7rem;
+  font-family: initial;
+  text-align: left;
+}
+.about-content p {
+  font-size: 1.7rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: transparent;
+  background-color: white;
+}
+.heading {
+  text-align: center;
+  font-size: 7rem;
+  margin: 5rem 0;
+}
+.services {
+  color: black;
+  background-color: var(--bg-color);
+}
+.services h2 {
+  color: var(--text-color);
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.services-container {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: center;
+  gap: 2.5rem;
+  display: grid;
+}
+.services-box {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color: var(--main-color);
+  height: 400px;
+  border-radius: 3rem;
+  cursor: pointer;
+  border: 5px solid transparent;
+  transition: 0.4s ease-in-out;
+}
+.services-box:hover {
+  color: var(--text-color);
+  background: var(--second-bg-color);
+  border: 5px solid var(--main-color);
+  transform: scale(1.03);
+}
+.services-info {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 5rem;
+}
+.services-info h4 {
+  font-size: 5.5rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
+  margin: 2rem 0;
+}
+.services-info i {
+  font-size: 6.3rem;
+}
+.services-info p {
+  font-size: 3.7rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.projects {
+  background-color: var(--second-bg-color);
+}
+.projects-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  place-items: center;
+  gap: 3.1rem;
+  row-gap: 5rem;
+}
+.projects-card {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  border-radius: 3rem;
+  gap: 2rem;
+  padding: 5rem 2rem;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 0 5px var(--main-color);
+  transition: 0.4s ease;
+}
+.projects-card:hover {
+  box-shadow: 0 0 25px var(--main-color) 0 0 50px var(--main-color);
+  transform: scale(1.02);
+}
+.projects-card img {
+  max-width: 300px;
+  border-radius: 2em;
+}
+
+.projects-card i {
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+  font-size: 2rem;
+  margin: 1rem;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  padding: 1rem;
+  border-radius: 40%;
+  background: transparent;
+  transition: 0.3s ease-in-out;
+}
+.projects-card i:hover {
+  color: var(--text-color);
+  background-color: var(--main-color);
+}
+.projects-card h3 {
+  font-size: 2.6rem;
+  font-weight: 600;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.projects-card p {
+  font-size: 2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.contact {
+  background-color: var(--bg-color);
+}
+.email {
+  color: var(--text-color);
+  margin-top: 15rem;
+  text-align: center;
+  font-size: 2.7rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.fa-envelope {
+  color: brown;
+  padding: 1rem;
+}
+.contact p {
+  text-align: center;
+  font-size: 2.4rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.footer {
+  border-top: 2px solid white;
+  background-color: var(--second-bg-color);
+  padding: 50px 0;
+}
+.copyright {
+  text-align: center;
+  font-size: 2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+@media (max-width: 1285px) {
+  #menu-icon {
+    display: block;
+  }
+  .navbar {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 50%;
+    padding: 1rem 3rem;
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom-left-radius: 2rem;
+    border-left: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+    display: none;
+  }
+  .navbar a {
+    font-size: 2rem;
+    display: block;
+    margin: 3rem 0;
+    color: var(--text-color);
+  }
+  .navbar.active {
+    display: block;
+  }
+  .home {
+    flex-direction: column-reverse;
+    gap: 5rem;
+    margin: 5rem 0;
+  }
+  .gradient-btn {
+    display: none;
+  }
+  .home-content {
+    text-align: center;
+    align-items: center;
+  }
+
+  .home-img img {
+    width: 56vw;
+    height: 40vh;
+  }
+  .about {
+    text-align: center;
+    flex-direction: column-reverse;
+  }
+  .about h2 {
+    margin: 2rem 0;
+    text-align: center;
+  }
+  .about p {
+    font-size: 1.5rem;
+  }
+  .about img {
+    width: 52vw;
+  }
+  .services h4 {
+    font-size: 2rem;
+  }
+  .services i {
+    font-size: 2.5rem;
+  }
+  .services-box {
+    margin: 3rem;
+  }
+  .services-box p {
+    font-size: 2rem;
+  }
+  .email {
+    font-size: 2rem;
+  }
+}
